@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+	<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>{Title}</title>
+		
+		<!—[if IE]>
+		        <script src=”http://html5shiv.googlecode.com/svn/trunk/html5.js”></script>
+		<![endif]—>
+		
+		<link rel="shortcut icon" href="{Favicon}">
+		<link rel="alternate" type="application/rss+xml" href="{RSS}">
+		{block:Description}
+			<meta name ="description" content="{MetaDescription}">
+		{/block:Description}
+		
+
+		<style>
+				body {
+					background: #FFF;
+					font-family: Helvetica, Arial, sans-serif;
+					font-size: 1.5em;
+					
+				}
+				
+	            article, aside, dialog, figure, footer, header,
+	            hgroup, menu, nav, section { display: block; }
+	
+				header {}
+	
+				footer {}
+	
+				aside {}
+				
+				menu {}
+				
+				nav {}
+				
+
+	
+				
+	
+	    </style>	
+
+
+		
+	</head>
+	
+	<body>
+		
+		
+		<header>
+			<h1>{Title}</h1>
+	
+			{Description}
+		</header>
+		
+	{block:Posts}
+		<section>
+
+				{block:Text}
+					<article>
+					
+						{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+									
+						{Body}
+					
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>											
+					</article>
+					
+				{/block:Text}
+
+				{block:Answer}
+					<article>
+					
+						{Question}
+						{Asker}
+						{Answer}
+				
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>						
+					</article>
+					
+				{/block:Answer}
+
+				{block:Photo}
+					<article>
+						<img src="{PhotoURL-500}" alt="{PhotoAlt}">
+					
+						{block:Caption}
+							{Caption}
+						{/block:Caption}
+				
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>		
+					</article>
+					
+				{/block:Photo}
+
+				{block:Link}
+				
+					<article>
+				
+						<h2><a href="{URL}" {Target}>{Name}</a></h2>
+
+						{block:Description}
+							{Description}
+						{/block:Description}
+						
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>					
+					</article>
+					
+				{/block:Link}
+
+				{block:Video}
+					<article>
+						
+						{Video-500}
+
+						{block:Caption}
+							{Caption}
+						{/block:Caption}
+
+						<aside>
+							
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>											
+					</article>
+						
+				{/block:Video}
+
+				{block:Audio}
+				
+					<article>
+			
+						{AudioPlayerWhite}
+
+						{block:Caption}
+							{Caption}
+						{/block:Caption}
+						
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>						
+					</article>
+				{/block:Audio}
+				
+				{block:Quote}
+				
+					<article>
+					
+						{Quote}
+					
+						{block:Source}
+							{Source}
+				
+						{/block:Source}
+						
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+						
+						</aside>						
+					</article>
+				
+				{/block:Quote}
+				
+				{block:Photoset}
+			
+					<article>
+						
+						{Photoset-500}
+					
+						{block:Caption}
+							{Caption}
+						{/block:Caption}
+
+						<aside>
+
+							<div id="Date">{block:Date}{Month} {DayOfMonth} {Year} {/block:Date}</div>			
+							<div id="NoteCount">{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount}</div>
+							<div id="PostNotes">{block:PostNotes}{PostNotes}{/block:PostNotes}</div>
+					
+						</aside>
+					</article>
+										
+				{/block:Photoset}
+			
+		</section>
+	{/block:Posts}	
+	
+	
+		<footer>
+					<nav>
+					{block:PreviousPage} <a href="{PreviousPage}">&#171; Previous | </a> {/block:PreviousPage}
+			
+					<!-- Please Note that you must change this link to yourtumblraddress.tumblr.com/ask or something similar to get it to work! -->
+					{block:AskEnabled}<a href="http://badlink.tumblr.com/ask">{AskLabel}</a>{/block:AskEnabled}
+					{block:NextPage} <a href="{NextPage}">| Next &#187;</a> {/block:NextPage}
+					</nav>
+		</footer>
+	
+	
+	</body>
+	</html>
