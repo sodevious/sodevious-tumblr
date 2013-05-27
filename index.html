@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
     <html lang="en">
     
-	<head>
+    <head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<title>{Title}</title>
 		
@@ -34,16 +34,17 @@
 	            hgroup, menu, nav, section { display: block; }
 	
 				h1 {
-					width: 70%;
-					display: block;
+                    display: block;
 					text-align: center;
 					margin: 0px auto;
                     padding: 20px;
-				  background: url("http://nicoledominguez.com/img/nicole-dominguez-logo.png");
-  text-indent: -9999px;
-
-  
-
+                    background: url("http://nicoledominguez.com/img/nicole-dominguez-logo.png");
+                    text-indent: -9999px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    width: 50%;
+                    height: 160px;
+                    background-size: 280px;
 				}
                 
                 h2 a {
@@ -70,8 +71,14 @@
 				}
                 
                 footer {
-                    padding: 30px;
                     border-top: 1px solid #413d4f;
+                }
+                
+                footer li {
+                    padding: 25px;
+                    list-style-type: none;
+                    display: inline-block;
+                    float: left;
                 }
                 
                 footer span {
@@ -86,6 +93,15 @@
                     font-size: 24px;
                     margin: 20px 0px 20px 30px;
                     padding: 0;
+                }
+                
+                @media all and (max-width: 800px) {
+                    section {
+                        width: 95%;
+                    }
+                    h1 {
+                        width: 90%;
+                    }
                 }
 	    </style>	
 
@@ -270,7 +286,17 @@
 	
 	
 		<footer>
-		<a href="http://twitter.com/sodevious">@sodevious</a> <span>| on twitter</a>
+        <ul>
+        <li>
+        <a href="http://twitter.com/sodevious">@sodevious</a> <span>| on twitter</a>
+        </li>
+        
+        <li>
+        <a href="https://github.com/sodevious/sodevious-tumblr">Source code</a> <span>| on github</a>
+        </li>
+        </ul>
+
+
 		<nav>
 			{block:PreviousPage} <a href="{PreviousPage}">&#171; Previous | </a> {/block:PreviousPage}
 
